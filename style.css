@@ -1,7 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -18,11 +23,13 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.2s;
 }
 
 .choice:hover {
   cursor: pointer;
   background-color: #081b31;
+  transform: scale(1.05);
 }
 
 img {
@@ -38,20 +45,21 @@ img {
   align-items: center;
   gap: 3rem;
   margin-top: 5rem;
+  flex-wrap: wrap;
 }
 
 .score-board {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4rem;
+  font-size: 3rem;
   margin-top: 3rem;
   gap: 5rem;
 }
 
 #user-score,
 #comp-score {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .msg-container {
@@ -62,58 +70,71 @@ img {
   background-color: #081b31;
   color: #fff;
   font-size: 2rem;
-  display: inline;
-  padding: 1rem;
+  display: inline-block;
+  padding: 1rem 2rem;
   border-radius: 1rem;
 }
-@media (max-width: 900px) {
+
+
+@media (max-width: 768px) {
   .choices {
     gap: 2rem;
+    flex-wrap: wrap;
   }
+
   .choice {
     height: 130px;
     width: 130px;
   }
+
   img {
     height: 120px;
     width: 120px;
   }
+
   .score-board {
     font-size: 3rem;
     gap: 3rem;
   }
+
   #msg {
     font-size: 1.5rem;
-    padding: 0.8rem;
+    padding: 0.8rem 1.5rem;
   }
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 480px) {
   h1 {
     font-size: 1.8rem;
     height: 4rem;
     line-height: 4rem;
   }
+
   .choices {
     flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 3rem;
+    gap: 1.2rem;
+    margin-top: 2.5rem;
   }
+
   .choice {
-    height: 120px;
-    width: 120px;
+    height: 110px;
+    width: 110px;
   }
+
   img {
-    height: 100px;
-    width: 100px;
+    height: 95px;
+    width: 95px;
   }
+
   .score-board {
     flex-direction: column;
     font-size: 2.5rem;
     gap: 1rem;
   }
+
   #msg {
     font-size: 1.3rem;
-    padding: 0.6rem;
+    padding: 0.6rem 1rem;
   }
 }
